@@ -6,18 +6,20 @@ namespace Models{
         public int Id {get; set;}
         public int ProductId {get; set;}
         public int WarehouseId {get; set;}
-        public double Value {get; set;}
+        public int Quantity {get; set;}
 
-        public Balance(int id, int productId, int warehouseId, double value){
+        public Balance(int id, int productId, int warehouseId, int quantity){
             this.Id = id;
             this.ProductId = productId;
             this.WarehouseId = warehouseId;
-            this.Value = value;
+            this.Quantity = quantity;
+
+            this.create(this);
         }
 
         public Balance(){}
 
-        public void register(Balance balance){
+        public void create(Balance balance){
             using(Context context = new Context()){
                 context.balances.Add(balance);
                 context.SaveChanges();

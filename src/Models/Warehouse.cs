@@ -11,11 +11,13 @@ namespace Models{
             this.Id = id;
             this.Name = name;
             this.Address = address;
+
+            this.create(this);
         }
 
         public Warehouse(){}
 
-        public void register(Warehouse warehouse){
+        public void create(Warehouse warehouse){
             using(Context context = new Context()){
                 context.warehouses.Add(warehouse);
                 context.SaveChanges();

@@ -5,18 +5,20 @@ namespace Models{
         public int Id {get; set;}
         public string Name {get; set;}
         public string Description {get; set;}
-        public string Price {get; set;}
+        public double Price {get; set;}
 
-        public Product(int id, string name, string description, string price){
+        public Product(int id, string name, string description, double price){
             this.Id = id;
             this.Name = name;
             this.Description = description;
             this.Price = price;
+
+            this.create(this);
         }
 
         public Product(){}
 
-        public void register(Product product){
+        public void create(Product product){
             using(Context context = new Context()){
                 context.products.Add(product);
                 context.SaveChanges();
