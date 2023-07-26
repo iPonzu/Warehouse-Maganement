@@ -1,7 +1,8 @@
 using Models;
 using Data;
 
-namespace Controllers{
+namespace Controllers
+{
     public class Balance{
         public static void create(int id, int productId, int warehouseId, int quantity){
             if(id == 0 || productId == 0 || warehouseId == 0 || quantity == 0){
@@ -12,10 +13,11 @@ namespace Controllers{
         }
         public static void update(int id, int productId, int warehouseId, int quantity){
             if(id == 0 || productId == 0 || warehouseId == 0 || quantity == 0){
-                throw new System.Exception("Invalid data");
+                throw new Exception("Invalid data");
             }
             if(id != 0 && productId != 0 && warehouseId != 0 && quantity != 0){
                 Models.Balance balance = Models.Balance.ReadById(id);
+                balance.Id = id;
                 balance.ProductId = productId;
                 balance.WarehouseId = warehouseId;
                 balance.Quantity = quantity;

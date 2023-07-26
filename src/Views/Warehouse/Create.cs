@@ -3,7 +3,7 @@ using Controllers;
 using Data;
 
 namespace Views{
-    public class Warehouse{
+    public class WarehouseCreate : Form{
         public Label lblid;
         public TextBox txtid;
         public Label lblname;

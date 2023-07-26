@@ -1,9 +1,9 @@
 using Controllers;
 using Models;
-using Data;
+using System.Windows.Forms;
 
 namespace Views{
-    public class Balance{
+    public class BalanceCreate : Form{
         public Label lblid;
         public TextBox txtid;
         public Label lblproductid;
@@ -23,7 +23,7 @@ namespace Views{
                 MessageBox.Show("Balance created successfully");
                 ClearForm();
             }
-            View.Balance balanceList = Application.OpenForms.OfType<View.Balance>().FirstOrDefault();
+            View balanceList = Application.OpenForms.OfType<View>().FirstOrDefault();
             if(balanceList != null){
                 balanceList.RefreshList();
             }
@@ -37,7 +37,7 @@ namespace Views{
             txtquantity.Text = "";
         }
 
-        public Balance(){
+        public BalanceCreate(){
             
         }
     }
