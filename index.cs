@@ -7,6 +7,6 @@ static class Program
     static void Main()
     {
         ApplicationConfiguration.Initialize();
-        Application.Run(new Menu());
+        Application.Run(new BalanceCreate());
     }
 }

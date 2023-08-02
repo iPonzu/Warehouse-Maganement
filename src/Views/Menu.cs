@@ -2,7 +2,7 @@ using Models;
 using Controllers;
 using System;
 
-namespace index{
+namespace Views{
     public class Menu : Form{
         
     }

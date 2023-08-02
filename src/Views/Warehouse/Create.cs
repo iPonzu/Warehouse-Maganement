@@ -21,7 +21,7 @@ namespace Views{
                 MessageBox.Show("Warehouse created successfully");
                 ClearForm();
             }
-            View.Warehouse warehouseList = Application.OpenForms.OfType<View.Warehouse>().FirstOrDefault();
+            WarehouseView warehouseList = Application.OpenForms.OfType<WarehouseView>().FirstOrDefault();
             if(warehouseList != null){
                 warehouseList.RefreshList();
             }
@@ -35,7 +35,7 @@ namespace Views{
         }
 
 
-        public Warehouse(){
+        public WarehouseCreate(){
             
         }
 

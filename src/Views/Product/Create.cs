@@ -21,7 +21,7 @@ namespace Views{
                 MessageBox.Show("Product created successfully");
                 ClearForm();
             }
-            View.Product productList = Application.OpenForms.OfType<View.Product>().FirstOrDefault();
+            ProductView productList = Application.OpenForms.OfType<ProductView>().FirstOrDefault();
             if(productList != null){
                 productList.RefreshList();
             }
@@ -34,7 +34,7 @@ namespace Views{
             txtprice.Text = "";
         }
 
-        public Product(){
+        public ProductCreate(){
             
         }
     }

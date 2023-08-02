@@ -3,7 +3,7 @@ using Controllers;
 using System;
 
 namespace Views{
-    public class View : Form{
+    public class BalanceView : Form{
         public enum Option {Update, Delete}
 
         ListView balanceList;
@@ -33,9 +33,7 @@ namespace Views{
                 return Models.Balance.ReadById(selectedBalance);
             }else{
                 throw new Exception($"Select an item to {(option == Option.Update ? "update" : "delete")})");
-            }
-            
-            
+            }     
         }
 
         private void btCreate_Click(object sender, EventArgs e){
@@ -81,7 +79,7 @@ namespace Views{
             this.Close();
         }
 
-        public View(){
+        public BalanceView(){
 
         }
 
