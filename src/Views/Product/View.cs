@@ -51,7 +51,7 @@ namespace Views{
                 RefreshList();
                 DialogResult r = MessageBox.Show($"Are you sure you want to update the product {product.Id}?", "Update", MessageBoxButtons.YesNo);
                 if(r == DialogResult.Yes){
-                    var ProductUpdate = new Views.ProductUpdate();
+                    var ProductUpdate = new Views.ProductUpdate(product);
                     if(ProductUpdate.ShowDialog() == DialogResult.OK){
                         RefreshList();
                         MessageBox.Show("Product updated successfully");

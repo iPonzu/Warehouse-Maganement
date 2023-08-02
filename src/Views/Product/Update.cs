@@ -10,6 +10,7 @@ namespace Views{
         public Label lblprice;
         public TextBox txtprice;
         public Button btUpdate;
+        public Button btBack;
 
         public Models.Product product;
 
@@ -33,11 +34,19 @@ namespace Views{
                 MessageBox.Show(ex.Message);
             }
         }
+        private void btBack_click(object sender, EventArgs e){
+            this.Close();
+            // Menu.Show();
+        }
 
         private void ClearForm(){
             txtid.Text = "";
             txtname.Text = "";
             txtprice.Text = "";
+        }
+
+        public ProductUpdate(Models.Product product){
+
         }
     }
 }

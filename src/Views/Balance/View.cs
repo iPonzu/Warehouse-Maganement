@@ -51,7 +51,7 @@ namespace Views{
                 RefreshList();
                 DialogResult r = MessageBox.Show($"Are you sure you want to update the balance {balance.Id}?", "Update", MessageBoxButtons.YesNo);
                 if(r == DialogResult.Yes){
-                    var BalanceUpdate = new Views.BalanceUpdate();
+                    var BalanceUpdate = new Views.BalanceUpdate(balance);
                     if(BalanceUpdate.ShowDialog() == DialogResult.OK){
                         RefreshList();
                         MessageBox.Show("Balance updated successfully");

@@ -45,7 +45,7 @@ namespace Views{
             txtquantity.Text = "";
         }
 
-        public BalanceUpdate(){
+        public BalanceUpdate(Models.Balance balance){
             
         }
     }
