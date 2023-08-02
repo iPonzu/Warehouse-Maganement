@@ -15,7 +15,7 @@ namespace Views{
         public Button btCreate;
         public Button btBack;
 
-        private void btCreate_Click(object sender, EventArgs e){
+        public void btCreate_Click(object sender, EventArgs e){
             if(txtid.Text == "" || txtproductid.Text == "" || txtwarehouseid.Text == "" || txtquantity.Text == "" || txtproductid.Text.Length > 0 || txtwarehouseid.Text.Length > 0 || txtquantity.Text.Length > 0){
                 MessageBox.Show("You must fill all the fields");
                 return;
@@ -31,7 +31,7 @@ namespace Views{
             this.Close();
         }
 
-        private void btBack_click(object sender, EventArgs e){
+        public void btBack_click(object sender, EventArgs e){
             this.Close();
             // Menu.Show();
         }
