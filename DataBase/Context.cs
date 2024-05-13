@@ -5,7 +5,7 @@ using Models;
 
 namespace Data{
     public class Context : DbContext{
-        public string connection = "Server=localhost; User Id=root;Database=warehousesystem";
+        public string connection = "Server=localhost; User Id=root;Database=warehousemaganement";
         public DbSet<Warehouse> warehouses {get; set;}
         public DbSet<Balance> balances {get; set;}
         public DbSet<Product> products {get; set;}
